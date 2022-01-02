@@ -1,10 +1,10 @@
 // functions3.rs
 // Make me compile! Execute `rustlings hint functions3` for hints :)
 
-// I AM NOT DONE
 
 fn main() {
-    call_me();
+    //函数需要传递一个u32的参数
+    call_me(20);
 }
 
 fn call_me(num: u32) {
