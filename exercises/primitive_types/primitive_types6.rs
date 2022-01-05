@@ -7,6 +7,7 @@
 fn indexing_tuple() {
     let numbers = (1, 2, 3);
     // Replace below ??? with the tuple indexing syntax.
+    //tuple可采用下标访问方式
     let second = numbers.1;
 
     assert_eq!(2, second,

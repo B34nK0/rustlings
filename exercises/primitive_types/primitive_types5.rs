@@ -4,6 +4,7 @@
 
 fn main() {
     let cat = ("Furry McFurson", 3.5);
+    //tuple可采用字段映射方式
     let (name, age)/* your pattern here */ = cat;
 
     println!("{} is {} years old.", name, age);
