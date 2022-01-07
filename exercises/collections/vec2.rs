@@ -7,12 +7,12 @@
 // Execute the command `rustlings hint vec2` if you need
 // hints.
 
-// I AM NOT DONE
-
 fn vec_loop(mut v: Vec<i32>) -> Vec<i32> {
+    //v当前值为[2,4,6,8,10]
     for i in v.iter_mut() {
         // TODO: Fill this up so that each element in the Vec `v` is
         // multiplied by 2.
+        *i *= 2;
     }
 
     // At this point, `v` should be equal to [4, 8, 12, 16, 20].
@@ -25,9 +25,11 @@ mod tests {
 
     #[test]
     fn test_vec_loop() {
+        //从1到最大值中取出5个可整除2的值 组成新的vec
         let v: Vec<i32> = (1..).filter(|x| x % 2 == 0).take(5).collect();
+        //采用clone复制一个新的vec给函数使用
         let ans = vec_loop(v.clone());
-
+        //遍历vec，将每个值乘于2组成新的vec
         assert_eq!(ans, v.iter().map(|x| x * 2).collect::<Vec<i32>>());
     }
 }
